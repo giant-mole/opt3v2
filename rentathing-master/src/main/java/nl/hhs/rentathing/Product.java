@@ -16,12 +16,20 @@ public abstract class Product implements IDatabase{
     public Product() {
     }
 
-    public Product(double prijsPerDag, String voornaam, String achternaam, double verzekeringskosten, boolean verhuurd, int aantalDagen,boolean verzekering) {
+    public Product(double prijsPerDag, String voornaam, String achternaam) {
         this.prijsPerDag = prijsPerDag;
         this.voornaam = voornaam;
         this.achternaam = achternaam;
+
+    }
+    public Product(double prijsPerDag, String voornaam, String achternaam,double verzekeringskosten, boolean verhuurd){
+        this(prijsPerDag,voornaam,achternaam);
         this.verzekeringskosten = verzekeringskosten;
         this.verhuurd = verhuurd;
+
+    }
+    public Product(double prijsPerDag, String voornaam, String achternaam,double verzekeringskosten, boolean verhuurd,int aantalDagen,boolean verzekering){
+        this(prijsPerDag,voornaam,achternaam,verzekeringskosten,verhuurd);
         this.aantalDagen = aantalDagen;
         this.verzekering=verzekering;
     }
